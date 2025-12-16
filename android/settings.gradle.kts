@@ -21,7 +21,11 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://storage.googleapis.com/download.flutter.io")
         maven {
             url = URI("https://artifactory-external.vkpartner.ru/artifactory/vkid-sdk-android/")
         }
