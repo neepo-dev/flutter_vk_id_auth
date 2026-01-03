@@ -20,6 +20,7 @@ void main() async {
   runApp(
     BlocProvider(
       create: (_) => AuthCubit(repository)..init(),
+      lazy: false, // enable force fast read the auth session for rid the UI lag
       child: const MyApp(),
     ),
   );
